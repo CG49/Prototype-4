@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject powerupIndicator;
 
     private bool hasPowerup;
+    private readonly float outOfBounds = -5f;
     private readonly float powerUpStrength = 18f;
     private readonly float powerUpTimeLimit = 10f;
 
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody playerRb;
     private GameObject focalPoint;
+    private SpawnManager spawnManager;
 
     void Awake()
     {
@@ -23,6 +25,8 @@ public class PlayerController : MonoBehaviour
 
         playerRb = GetComponent<Rigidbody>();
         focalPoint = GameObject.FindGameObjectWithTag("FocalPoint");
+
+        spawnManager = GameObject.FindWithTag("Respawn").GetComponent<SpawnManager>();
 
         playerActions = controls.Player;
     }
@@ -42,6 +46,14 @@ public class PlayerController : MonoBehaviour
 
         hasPowerup = false;
         powerupIndicator.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (transform.position.y < outOfBounds)
+        {
+            spawnManager.isGameOver = true;
+        }
     }
 
     void FixedUpdate()

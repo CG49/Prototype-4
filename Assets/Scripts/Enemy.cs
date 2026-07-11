@@ -4,14 +4,26 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private readonly float speed = 2f;
+    private readonly float outOfBounds = -10f;
 
     private GameObject player;
     private Rigidbody enemyRb;
+    private SpawnManager spawnManager;
 
     void Awake()
     {
         enemyRb = GetComponent<Rigidbody>();
         player = GameObject.FindWithTag("Player");
+
+        spawnManager = GameObject.FindWithTag("Respawn").GetComponent<SpawnManager>();
+    }
+
+    void Update()
+    {
+        if (transform.position.y < outOfBounds)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void FixedUpdate()
@@ -20,4 +32,13 @@ public class Enemy : MonoBehaviour
 
         enemyRb.AddForce(lookDirection * speed);
     }
+
+    void OnDestroy()
+    {
+        if (spawnManager != null)
+        {
+            spawnManager.enemyCount--;
+        }
+    }
 }
+
