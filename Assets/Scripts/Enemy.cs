@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Enemy : MonoBehaviour
 {
-    private readonly float speed = 1.5f;
+    private readonly float speed = 2f;
 
     private GameObject player;
     private Rigidbody enemyRb;
