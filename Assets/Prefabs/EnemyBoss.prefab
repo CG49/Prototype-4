@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2983967121831009860}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.1, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2983967121831009860}
@@ -101,7 +101,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8acd6d3021cd1394e8f8e8053e6920c4, type: 2}
+  - {fileID: 2100000, guid: 4c97b24d72ebade4d98acaf3b75c90ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -154,7 +154,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9152329626841385001}
   serializedVersion: 5
-  m_Mass: 5
+  m_Mass: 12
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -185,4 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4f8a7f498df7e4981dbed9aecab550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  speed: 7
+  isBoss: 1
+  speed: 5
+  spawnInterval: 5

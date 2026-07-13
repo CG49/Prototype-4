@@ -7,6 +7,7 @@ TagManager:
   - FocalPoint
   - Enemy
   - Powerup
+  - Missile
   layers:
   - Default
   - TransparentFX

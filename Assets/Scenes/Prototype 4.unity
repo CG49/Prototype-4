@@ -318,8 +318,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8892fced430ac614cac5bd1298ce8695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  playerSpeed: 25
+  playerSpeed: 20
+  rocketPrefab: {fileID: 4241894587074081671, guid: c96bf8fdac5521741b579b03df426c82, type: 3}
   powerupIndicator: {fileID: 440592684}
+  currentPowerUp: 1
+  hangTime: 1
+  smashSpeed: 3
+  explosionForce: 200
+  explosionRadius: 8
 --- !u!1001 &245963551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -887,10 +893,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40926714628b764ea786d64f46f4a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  enemyPrefab: {fileID: 2745201904629629229, guid: f167a0cfce8a89d4089d2cce83e7e65c, type: 3}
-  powerupPrefab: {fileID: 7168096348687775252, guid: b3072fac2c51d33439377744f83df38a, type: 3}
+  bossRound: 1
+  player: {fileID: 147365507}
+  bossPrefab: {fileID: 2745201904629629229, guid: bca9c60ff5d811248956948510c99d02, type: 3}
+  enemyPrefabs:
+  - {fileID: 2745201904629629229, guid: f167a0cfce8a89d4089d2cce83e7e65c, type: 3}
+  - {fileID: 2745201904629629229, guid: a85b01efc7d9536498d4bd1d3d6b3dff, type: 3}
+  powerupPrefabs:
+  - {fileID: 7168096348687775252, guid: 2c961124af02a154dae4b68e72df1af8, type: 3}
+  miniEnemyPrefabs:
+  - {fileID: 2745201904629629229, guid: f167a0cfce8a89d4089d2cce83e7e65c, type: 3}
+  - {fileID: 2745201904629629229, guid: a85b01efc7d9536498d4bd1d3d6b3dff, type: 3}
   enemyCount: 0
   isGameOver: 0
+  powerUpTimeLimit: 10
 --- !u!4 &1885516593
 Transform:
   m_ObjectHideFlags: 0
