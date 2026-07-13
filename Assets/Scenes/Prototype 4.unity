@@ -893,7 +893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40926714628b764ea786d64f46f4a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  bossRound: 1
+  bossRound: 3
   player: {fileID: 147365507}
   bossPrefab: {fileID: 2745201904629629229, guid: bca9c60ff5d811248956948510c99d02, type: 3}
   enemyPrefabs:
