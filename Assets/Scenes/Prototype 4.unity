@@ -900,6 +900,8 @@ MonoBehaviour:
   - {fileID: 2745201904629629229, guid: f167a0cfce8a89d4089d2cce83e7e65c, type: 3}
   - {fileID: 2745201904629629229, guid: a85b01efc7d9536498d4bd1d3d6b3dff, type: 3}
   powerupPrefabs:
+  - {fileID: 7168096348687775252, guid: b3072fac2c51d33439377744f83df38a, type: 3}
+  - {fileID: 7168096348687775252, guid: 51558b2222862714e93ad0fe573d5a7b, type: 3}
   - {fileID: 7168096348687775252, guid: 2c961124af02a154dae4b68e72df1af8, type: 3}
   miniEnemyPrefabs:
   - {fileID: 2745201904629629229, guid: f167a0cfce8a89d4089d2cce83e7e65c, type: 3}
