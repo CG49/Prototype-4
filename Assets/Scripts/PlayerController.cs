@@ -1,5 +1,5 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
 
         while (Time.time < jumpTime)
         {
-            // move the player up while still keeping their x velocity.
+            // move the player up while still keeping their x and z velocity
             playerRb.linearVelocity = new Vector3(playerRb.linearVelocity.x, smashSpeed, playerRb.linearVelocity.z);
             yield return null;
         }
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
         // Cycle through all enemies.
         for (int i = 0; i < enemies.Length; i++)
         {
-            // Apply an explosion force that originates from our position.
+            // Apply an explosion force that originates from our position
             if (enemies[i] != null)
                 enemies[i].GetComponent<Rigidbody>().AddExplosionForce(explosionForce, transform.position, explosionRadius, 0.0f, ForceMode.Impulse);
         }
